@@ -1,0 +1,32 @@
+.h2-faq {
+  font-family: Arial, Verdana;
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: #091f2f;
+  text-transform: uppercase;
+}
+.accordion-section-faq .panel-default-faq > .panel-heading-faq {
+  border: 0;
+  background: #f4f4f4;
+  padding: 0;
+}
+.accordion-section-faq .panel-default-faq .panel-title-faq a {
+  display: block;
+  font-style: italic;
+  font-size: 2.5rem;
+}
+.accordion-section-faq .panel-default-faq .panel-title-faq a:after {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-size: 3rem;
+  content: "\f106";
+  color: #1f7de2;
+  float: right;
+  margin-top: -12px;
+}
+.accordion-section-faq .panel-default-faq .panel-title-faq a.collapsed-faq:after {
+  content: "\f107";
+}
+.accordion-section-faq .panel-default-faq .panel-body-faq {
+  font-size: 1.2rem;
+}
