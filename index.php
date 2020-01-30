@@ -150,7 +150,7 @@
             </figure>
             <div class="product-text">
               <h6>Traje de baño enterizo azul</h6>
-              <p>$22.90</p>
+              <p>$2200.90</p>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@
             </figure>
             <div class="product-text">
               <h6>Vestido largo amarillo</h6>
-              <p>$25.90</p>
+              <p>$2500.90</p>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@
             </figure>
             <div class="product-text">
               <h6>Body de una pieza</h6>
-              <p>$19.90</p>
+              <p>$1900.90</p>
             </div>
           </div>
         </div>
@@ -185,8 +185,8 @@
               <div class="p-status popular">popular</div>
             </figure>
             <div class="product-text">
-              <h6>Vestido Azul con detalles</h6>
-              <p>$35.50</p>
+              <h6>Vestido azul con detalles</h6>
+              <p>$3500.50</p>
             </div>
           </div>
         </div>
@@ -198,7 +198,7 @@
             </figure>
             <div class="product-text">
               <h6>Musculosa con detalles</h6>
-              <p>$22.90</p>
+              <p>$2200.90</p>
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@
             </figure>
             <div class="product-text">
               <h6>Traje de baño enterizo blanco</h6>
-              <p>$25.90</p>
+              <p>$2500.90</p>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
             </figure>
             <div class="product-text">
               <h6>Body de una pieza</h6>
-              <p>$19.90</p>
+              <p>$1900.90</p>
             </div>
           </div>
         </div>
@@ -233,7 +233,7 @@
             </figure>
             <div class="product-text">
               <h6>Vestido al cuerpo</h6>
-              <p>$35.50</p>
+              <p>$3500.50</p>
             </div>
           </div>
         </div>

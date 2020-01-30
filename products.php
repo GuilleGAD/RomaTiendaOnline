@@ -14,10 +14,10 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="page-breadcrumb">
-            <h2>Dresses<span>.</span></h2>
-            <a href="#">Home</a>
-            <a href="#">Dresses</a>
-            <a class="active" href="#">Night Dresses</a>
+            <h2>Remeras<span>.</span></h2>
+            <a href="#">Inicio</a>
+            <a href="#">Remeras</a>
+            <a class="active" href="#">Remeras de Noche</a>
           </div>
         </div>
         <div class="col-lg-8">
@@ -38,15 +38,15 @@
               <div class="cf-left">
                 <form action="#">
                   <select class="sort">
-                    <option value="">Sort by</option>
-                    <option value="">Orders</option>
-                    <option value="">Newest</option>
-                    <option value="">Price</option>
+                    <option value="">Ordenar por</option>
+                    <option value="">Pedidos</option>
+                    <option value="">Novedades</option>
+                    <option value="">Precio</option>
                   </select>
                 </form>
               </div>
               <div class="cf-right">
-                <span>20 Products</span>
+                <span>20 Productos</span>
                 <a href="#">2</a>
                 <a href="#" class="active">4</a>
                 <a href="#">6</a>
@@ -60,16 +60,16 @@
           <div class="single-product-item">
             <figure>
               <img src="img/products/img-9.jpg" alt="">
-              <div class="p-status">new</div>
+              <div class="p-status">Nuevo</div>
               <div class="hover-icon">
                 <a href="img/products/img-9.jpg" class="pop-up"><img src="img/icons/zoom-plus.png" alt=""></a>
               </div>
             </figure>
             <div class="product-text">
-              <a href="#">
-                <h6>Green Dress with details</h6>
+              <a href="./product-description.php">
+                <h6>Camisa hombre punteado</h6>
               </a>
-              <p>$22.90</p>
+              <p>$2200.90</p>
             </div>
           </div>
         </div>
@@ -79,13 +79,13 @@
               <div class="single-product-item">
                 <figure>
                   <img src="img/products/img-2.jpg" alt="">
-                  <div class="p-status sale">sale</div>
+                  <div class="p-status sale">Promo</div>
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>Yellow Maxi Dress</h6>
+                    <h6>Vestido largo amarillo</h6>
                   </a>
-                  <p>$25.90</p>
+                  <p>$2500.90</p>
                 </div>
               </div>
             </div>
@@ -100,9 +100,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>One piece bodysuit</h6>
+                    <h6>Body de una pieza</h6>
                   </a>
-                  <p>$19.90</p>
+                  <p>$1900.90</p>
                 </div>
               </div>
             </div>
@@ -114,9 +114,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>Yellow Maxi Dress</h6>
+                    <h6>Traje de baño enterizo blanco</h6>
                   </a>
-                  <p>$25.90</p>
+                  <p>$2500.90</p>
                 </div>
               </div>
             </div>
@@ -130,9 +130,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>One piece bodysuit</h6>
+                    <h6>Traje de baño enterizo azul</h6>
                   </a>
-                  <p>$19.90</p>
+                  <p>$1900.90</p>
                 </div>
               </div>
             </div>
@@ -149,9 +149,9 @@
             </figure>
             <div class="product-text">
               <a href="#">
-                <h6>Green Dress with details</h6>
+                <h6>Musculosa con detalles</h6>
               </a>
-              <p>$22.90</p>
+              <p>$2200.90</p>
             </div>
           </div>
         </div>
@@ -166,9 +166,9 @@
             </figure>
             <div class="product-text">
               <a href="#">
-                <h6>Blue Dress with details</h6>
+                <h6>Vestido azul con detalles</h6>
               </a>
-              <p>$35.50</p>
+              <p>$3500.50</p>
             </div>
           </div>
         </div>
@@ -183,9 +183,9 @@
             </figure>
             <div class="product-text">
               <a href="#">
-                <h6>Blue Dress with details</h6>
+                <h6>Vestido al cuerpo</h6>
               </a>
-              <p>$35.50</p>
+              <p>$3500.50</p>
             </div>
           </div>
         </div>
@@ -200,9 +200,9 @@
             </figure>
             <div class="product-text">
               <a href="#">
-                <h6>Blue Dress with details</h6>
+                <h6>Traje de baño enterizo negro</h6>
               </a>
-              <p>$35.50</p>
+              <p>$3500.50</p>
             </div>
           </div>
         </div>
@@ -216,9 +216,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>Yellow Maxi Dress</h6>
+                    <h6>Zapatos taco ancho</h6>
                   </a>
-                  <p>$25.50</p>
+                  <p>$2500.50</p>
                 </div>
               </div>
             </div>
@@ -233,9 +233,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>One piece bodysuit</h6>
+                    <h6>Remera con transparencias</h6>
                   </a>
-                  <p>$19.90</p>
+                  <p>$1900.90</p>
                 </div>
               </div>
             </div>
@@ -247,9 +247,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>Yellow Maxi Dress</h6>
+                    <h6>Sobretodo negro</h6>
                   </a>
-                  <p>$25.90</p>
+                  <p>$2500.90</p>
                 </div>
               </div>
             </div>
@@ -263,9 +263,9 @@
                 </figure>
                 <div class="product-text">
                   <a href="#">
-                    <h6>One piece bodysuit</h6>
+                    <h6>Pulover rojo</h6>
                   </a>
-                  <p>$19.90</p>
+                  <p>$1900.90</p>
                 </div>
               </div>
             </div>
@@ -282,9 +282,9 @@
             </figure>
             <div class="product-text">
               <a href="#">
-                <h6>Green Dress with details</h6>
+                <h6>Body de una pieza</h6>
               </a>
-              <p>$22.90</p>
+              <p>$2200.90</p>
             </div>
           </div>
         </div>
@@ -292,7 +292,7 @@
       <div class="more-product">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <a href="#" class="primary-btn">Load More</a>
+            <a href="#" class="primary-btn">mas</a>
           </div>
         </div>
       </div>

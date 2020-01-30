@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="page-breadcrumb">
-            <h2>Checkout<span>.</span></h2>
+            <h2>Finalizar Compra<span>.</span></h2>
           </div>
         </div>
         <div class="col-lg-8">
@@ -31,23 +31,23 @@
       <form action="#" class="checkout-form">
         <div class="row">
           <div class="col-lg-12">
-            <h3>Your Information</h3>
+            <h3>Tu Información</h3>
           </div>
           <div class="col-lg-9">
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">Name*</p>
+                <p class="in-name">Nombre*</p>
               </div>
               <div class="col-lg-5">
-                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Nombre">
               </div>
               <div class="col-lg-5">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Apellido">
               </div>
             </div>
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">Street Address*</p>
+                <p class="in-name">Dirección*</p>
               </div>
               <div class="col-lg-10">
                 <input type="text">
@@ -56,17 +56,17 @@
             </div>
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">Country*</p>
+                <p class="in-name">País*</p>
               </div>
               <div class="col-lg-10">
                 <select class="cart-select country-usa">
-                  <option>USA</option>
+                  <option>Argentina</option>
                 </select>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">City*</p>
+                <p class="in-name">Provincia*</p>
               </div>
               <div class="col-lg-10">
                 <input type="text">
@@ -74,7 +74,7 @@
             </div>
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">Country</p>
+                <p class="in-name">Ciudad</p>
               </div>
               <div class="col-lg-10">
                 <input type="text">
@@ -82,7 +82,7 @@
             </div>
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">Post Code/ZIP*</p>
+                <p class="in-name">Codigo Postal/ZIP*</p>
               </div>
               <div class="col-lg-10">
                 <input type="text">
@@ -90,7 +90,7 @@
             </div>
             <div class="row">
               <div class="col-lg-2">
-                <p class="in-name">Phone*</p>
+                <p class="in-name">Telefono*</p>
               </div>
               <div class="col-lg-10">
                 <input type="text">
@@ -100,7 +100,7 @@
               <div class="col-lg-12 text-right">
                 <div class="diff-addr">
                   <input type="radio" id="one">
-                  <label for="one">Ship to different address</label>
+                  <label for="one">Enviar a una diferente dirección</label>
                 </div>
               </div>
             </div>
@@ -108,25 +108,25 @@
           <div class="col-lg-3">
             <div class="order-table">
               <div class="cart-item">
-                <span>Product</span>
-                <p class="product-name">Blue Dotted Shirt</p>
+                <span>Producto</span>
+                <p class="product-name">Cam. Azul Punteada</p>
               </div>
               <div class="cart-item">
-                <span>Price</span>
-                <p>$29</p>
+                <span>Precio</span>
+                <p>$2900</p>
               </div>
               <div class="cart-item">
-                <span>Quantity</span>
+                <span>Cantidad</span>
                 <p>1</p>
               </div>
               <div class="cart-item">
-                <span>Shipping</span>
-                <p>$10</p>
+                <span>Envio</span>
+                <p>$100</p>
               </div>
 
               <div class="cart-total">
                 <span>Total</span>
-                <p>$39</p>
+                <p>$3000</p>
               </div>
             </div>
           </div>
@@ -134,16 +134,16 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="payment-method">
-              <h3>Payment</h3>
+              <h3>Método de Pago</h3>
               <ul>
                 <li>Paypal <img src="img/paypal.jpg" alt=""></li>
-                <li>Credit / Debit card <img src="img/mastercard.jpg" alt=""></li>
+                <li>Tarjeta de Crédito / Debito <img src="img/mastercard.jpg" alt=""></li>
                 <li>
-                  <label for="two">Pay when you get the package</label>
+                  <label for="two">Pagar cuando recibas tu pedido</label>
                   <input type="radio" id="two">
                 </li>
               </ul>
-              <button type="submit">Place your order</button>
+              <button type="submit">Finalizar compra</button>
             </div>
           </div>
         </div>

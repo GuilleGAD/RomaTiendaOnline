@@ -5,8 +5,7 @@ $token = strtok("/");
 
 $index = "";
 $contact = "";
-$shop = "";
-$productPage = "";
+$products = "";
 $faq = "";
 
 
@@ -16,11 +15,8 @@ if ($token == "index.php") {
 if ($token == "contact.php") {
   $contact = "active";
 }
-if ($token == "categories.php") {
-  $shop = "active";
-}
-if ($token == "product-page.php") {
-  $productPage = "active";
+if ($token == "products.php") {
+  $products = "active";
 }
 if ($token == "faq.php") {
   $faq = "active";
@@ -49,7 +45,7 @@ if ($token == "faq.php") {
   <div class="container-fluid">
     <div class="inner-header">
       <div class="logo">
-        <a href="./index.php"><img src="img/logo.jpg" alt=""></a>
+        <a href="./index.php"><img src="img/logo1.png" alt=""></a>
       </div>
       <div class="header-right">
         <img src="img/icons/search.png" alt="" class="search-trigger">
@@ -68,11 +64,11 @@ if ($token == "faq.php") {
       <nav class="main-menu mobile-menu">
         <ul>
           <li><a class="<?php echo $index ?>" href="./index.php">Inicio</a></li>
-          <li><a class="<?php echo $shop ?>" href="./categories.php">Productos</a>
+          <li><a class="<?php echo $products ?>" href="./products.php">Productos</a>
             <ul class="sub-menu">
-              <li><a href="product-page.php">Product Page</a></li>
-              <li><a href="shopping-cart.php">Shopping Card</a></li>
-              <li><a href="check-out.php">Check out</a></li>
+              <li><a href="product-description.php">Producto Selecionado</a></li>
+              <li><a href="shopping-cart.php">Carrito de Compra</a></li>
+              <li><a href="check-out.php">Finalizar Compra</a></li>
             </ul>
           </li>
           <li><a class="<?php echo $faq ?>" href="./faq.php">F.A.Q.</a></li>
