@@ -57,7 +57,7 @@
               </div>
               <div class="col-lg-6">
                 <label for="">Foto de perfil:</label>
-                <input type="file" name="fotoPerfil" value="">
+                <input type="file" name="fotoPerfil" id="seleccionArchivos" accept="image/*">
               </div>
               <div class="col-lg-12 text-right">
                 <button type="submit">Crear Cuenta</button>
@@ -68,7 +68,8 @@
         <div class="col-lg-3 offset-lg-1">
           <div class="contact-widget">
             <div class="cw-item">
-              <h5>Publicidad</h5>
+              <img id="imagenPrevisualizacion">
+              <script src="js/previsualizarImagen.js"></script>
             </div>
           </div>
         </div>

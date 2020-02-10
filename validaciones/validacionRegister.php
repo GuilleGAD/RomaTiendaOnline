@@ -7,7 +7,6 @@ $email = "";
 $telefono = "";
 $password = "";
 $repassword = "";
-$fotoPeril = "";
 $errores = [];
 
 if($_POST){
@@ -70,7 +69,6 @@ if(sizeof($errores)!=0){
   $telefono = $_POST["telefono"];
   $password = $_POST["password"];
   $repassword = $_POST["repassword"];
-  $fotoPeril = "ACA TIENE QUE IR LA PERSISTENCIA DE LA FOTO DE PERFIL";
 }
 
 ?>
