@@ -1,3 +1,5 @@
+<?php require_once("validaciones/validacionContact.php"); ?>
+<?php require_once("phpCompartido/funciones.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,22 +28,23 @@
   <!-- Page Add Section End -->
 
   <!-- Contact Section Begin -->
+
   <div class="contact-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <form action="#" class="contact-form">
+          <form action="contact.php" class="contact-form" method="POST">
             <div class="row">
               <div class="col-lg-6">
-                <input type="text" placeholder="Nombre">
+                <input type="text" name="nombre" placeholder="Nombre" value="<?=$nombre?>">
               </div>
               <div class="col-lg-6">
-                <input type="text" placeholder="Apellido">
+                <input type="text" name="apellido" placeholder="Apellido" value="<?=$apellido?>">
               </div>
               <div class="col-lg-12">
-                <input type="email" placeholder="E-mail">
-                <input type="text" placeholder="Asunto">
-                <textarea placeholder="Mensaje"></textarea>
+                <input type="email" name="email" placeholder="E-mail" value="<?=$email?>">
+                <input type="text" name="asunto" placeholder="Asunto"  value="<?=$asunto?>">
+                <textarea name="mensaje" placeholder="Mensaje"><?=$mensaje?></textarea>
               </div>
               <div class="col-lg-12 text-right">
                 <button type="submit">Enviar mensaje</button>
@@ -49,6 +52,11 @@
             </div>
           </form>
         </div>
+
+        <!-- Alerta de Error -->
+        <?php require_once("phpCompartido/errorAlert.php"); ?>
+        <!-- Fin alerta de Error -->
+
         <div class="col-lg-3 offset-lg-1">
           <div class="contact-widget">
             <div class="cw-item">

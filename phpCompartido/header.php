@@ -1,29 +1,3 @@
-<?php
-$url = $_SERVER['REQUEST_URI'];
-$token = strtok($url, "/");
-$token = strtok("/");
-
-$index = "";
-$contact = "";
-$products = "";
-$faq = "";
-
-
-if ($token == "index.php") {
-  $index = "active";
-}
-if ($token == "contact.php") {
-  $contact = "active";
-}
-if ($token == "products.php") {
-  $products = "active";
-}
-if ($token == "faq.php") {
-  $faq = "active";
-}
-
-?>
-
 <!-- Page Preloder -->
 <div id="preloder">
   <div class="loader"></div>

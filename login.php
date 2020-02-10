@@ -1,3 +1,5 @@
+<?php require_once("validaciones/validacionLogin.php"); ?>
+<?php require_once("phpCompartido/funciones.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +31,10 @@
   <div class="contact-section">
     <div class="container">
       <div class="row justify-content-md-center">
-        <form action="#" class="contact-form">
+        <form action="login.php" class="contact-form" method="POST">
           <div class="col-lg-12">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Password">
+            <input type="email" placeholder="E-mail" name="email" value="<?=$email?>">
+            <input type="password" placeholder="Password" name="password" value="<?=$password?>">
           </div>
           <div class="col-lg-12 text-right">
             <button type="submit">Inicia Sesión</button>
@@ -42,6 +44,10 @@
     </div>
   </div>
   <!-- Login Section End -->
+
+  <!-- Alerta de Error -->
+  <?php require_once("phpCompartido/errorAlert.php"); ?>
+  <!-- Fin alerta de Error -->
 
   <!-- FOOTER -->
   <?php require_once("phpCompartido/footer.php"); ?>

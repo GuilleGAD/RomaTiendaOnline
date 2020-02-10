@@ -1,3 +1,4 @@
+<?php require_once("phpCompartido/funciones.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="page-breadcrumb">
-            <h2>Cart<span>.</span></h2>
+            <h2>Carrito<span>.</span></h2>
             <a href="#">Inicio</a>
             <a href="#">Hombre</a>
             <a class="active" href="#">Camisas</a>
