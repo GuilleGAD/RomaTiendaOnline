@@ -68,7 +68,7 @@
         <div class="col-lg-3 offset-lg-1">
           <div class="contact-widget">
             <div class="cw-item">
-              <img class="img-fluid img-thumbnail" id="imagenPrevisualizacion">
+              <img class="img-fluid img-thumbnail" id="imagenPrevisualizacion" src="img/imageProfile.png">
               <script src="js/previsualizarImagen.js"></script>
             </div>
           </div>
