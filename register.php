@@ -1,5 +1,5 @@
-<?php require_once("validaciones/validacionRegister.php"); ?>
 <?php require_once("phpCompartido/funciones.php"); ?>
+<?php require_once("validaciones/validacionRegister.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,6 +58,12 @@
               <div class="col-lg-6">
                 <label for="">Foto de perfil:</label>
                 <input type="file" name="fotoPerfil" id="seleccionArchivos" accept="image/*">
+              </div>
+              <div class="form-check col-lg-6">
+                <input class="form-check-input" type="checkbox" value="" id="recordarme">
+                <label class="form-check-label" for="recordarme">
+                  Recordarme
+                </label>
               </div>
               <div class="col-lg-12 text-right">
                 <button type="submit">Crear Cuenta</button>

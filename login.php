@@ -36,6 +36,12 @@
             <input type="email" placeholder="E-mail" name="email" value="<?=$email?>">
             <input type="password" placeholder="Password" name="password" value="<?=$password?>">
           </div>
+          <div class="form-check col-lg-12">
+            <input class="form-check-input" type="checkbox" value="" id="recordarme">
+            <label class="form-check-label" for="recordarme">
+              Recordarme
+            </label>
+          </div>
           <div class="col-lg-12 text-right">
             <button type="submit">Inicia Sesión</button>
           </div>

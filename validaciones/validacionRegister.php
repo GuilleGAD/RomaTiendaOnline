@@ -7,10 +7,11 @@ $email = "";
 $telefono = "";
 $password = "";
 $repassword = "";
+$extension = "";
 $errores = [];
 
 if($_POST){
-  //Validar
+  //Validación de Errores de completado de campos
   if(strlen($_POST["nombre"])==0){
     $errores[] = "El NOMBRE no puede ser vacío.";
   }
@@ -40,13 +41,10 @@ if($_POST){
     strcmp($_POST["password"],$_POST["repassword"])!=0){
     $errores[] = "El PASSWORD y el RE-PASSWORD son distintos.";
   }
-
-  //Registrarlo
-
-  //header("Location:exito.php");exit;
 }
 
 if($_FILES){
+  //Validación de archivo
   if(strlen($_FILES["fotoPerfil"]["name"])==0){
     $errores[] = "Debe ingresar una FOTO DE PERFIL";
   }else if($_FILES["fotoPerfil"]["error"]!=0){
@@ -62,6 +60,7 @@ if($_FILES){
 }
 
 if($_POST){
+  //Persistencia de datos en caso de errores
   if(sizeof($errores)!=0){
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
@@ -89,11 +88,18 @@ if($_POST){
 
     $json = json_encode($listaUsuarios);
     file_put_contents("json/listaUsuarios.json", $json);
+
+    $_SESSION["nombre"] = $_POST["nombre"];
+    $_SESSION["apellido"] = $_POST["apellido"];
+    $_SESSION["usuario"] = $_POST["userName"];
+    $_SESSION["extension"] = $extension;
+    $_SESSION["email"] = $_POST["email"];
+    $_SESSION["telefono"] = $_POST["telefono"];
+    $_SESSION["password"] = $passEncriptado;
+
+    header("Location:index.php");exit;
   }
+
 }
-
-
-
-
 
 ?>

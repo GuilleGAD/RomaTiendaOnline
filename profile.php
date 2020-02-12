@@ -22,8 +22,8 @@
         <!--left col-->
 
         <div class="text-center">
-          <img src="./img/avatar.png" class="avatar img-circle img-thumbnail" alt="avatar">
-          <h6>Cargar una nueva foto de perfil...</h6>
+          <img src="./img/imageProfiles/<?php echo $_SESSION["usuario"] . "." . $_SESSION["extension"]?>" class="avatar img-circle img-thumbnail" alt="avatar">
+          <h3><?php echo $_SESSION["usuario"]?></h3>
           <input type="file" class="text-center center-block file-upload">
         </div>
         </hr><br>
@@ -47,7 +47,8 @@
               <label for="first_name">
                 <h4>Nombre</h4>
               </label>
-              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="nombre" title="Ingrese su nombre.">
+              <input type="text" class="form-control" name="first_name" id="first_name" 
+              placeholder="nombre" title="Ingrese su nombre." value=<?php echo $_SESSION["nombre"]?>>
             </div>
           </div>
           <div class="form-group">
@@ -56,7 +57,8 @@
               <label for="last_name">
                 <h4>Apellido</h4>
               </label>
-              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="apellido" title="Ingrese su apellido.">
+              <input type="text" class="form-control" name="last_name" id="last_name"
+              placeholder="apellido" title="Ingrese su apellido." value=<?php echo $_SESSION["apellido"]?>>
             </div>
           </div>
 
@@ -66,7 +68,8 @@
               <label for="phone">
                 <h4>Telefono</h4>
               </label>
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="ingrese su número telefónico" title="Ingrese su número telefónico con código de área.">
+              <input type="text" class="form-control" name="phone" id="phone" value=<?php echo $_SESSION["telefono"]?>
+              placeholder="ingrese su número telefónico" title="Ingrese su número telefónico con código de área.">
             </div>
           </div>
 
@@ -84,7 +87,8 @@
               <label for="email">
                 <h4>Email</h4>
               </label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="tu@email.com" title="Ingrese su email.">
+              <input type="email" class="form-control" name="email" id="email" value=<?php echo $_SESSION["email"]?>
+              placeholder="tu@email.com" title="Ingrese su email.">
             </div>
           </div>
           <div class="form-group">

@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION)){ 
+  session_start(); 
+}
+
 $url = $_SERVER['REQUEST_URI'];
 $token = strtok($url, "/");
 $token = strtok("/");
@@ -23,8 +27,19 @@ if ($token == "index.php") {
   $nombrePagina = "F.A.Q.";
 }else if ($token == "register.php") {
   $nombrePagina = "Registro";
+  if(!empty($_SESSION["usuario"])){
+    header("Location:index.php");exit;
+  }
 }else if ($token == "login.php") {
   $nombrePagina = "Login";
+  if(!empty($_SESSION["usuario"])){
+    header("Location:index.php");exit;
+  }
+}else if ($token == "profile.php"){
+  $nombrePagina = "Perfil de Usuario";
+  if(empty($_SESSION["usuario"])){
+    header("Location:index.php");exit;
+  }
 }else{
   $nombrePagina = "Tienda Online";
 }

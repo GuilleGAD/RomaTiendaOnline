@@ -23,19 +23,34 @@
       </div>
       <div class="header-right">
         <img src="img/icons/search.png" alt="" class="search-trigger">
-        <a class="icon-user" href="./profile.php">
-          <img src="img/icons/man.png" alt="">
-        </a>
-        <a href="./check-out.php">
-          <img src="img/icons/bag.png" alt="">
-          <span>2</span>
-        </a>
+
+        <?php if(!empty($_SESSION["usuario"])) : ?>
+          <a class="icon-user" href="./profile.php">
+            <img src="img/icons/man.png" alt="">
+          </a>
+          <a href="./check-out.php">
+            <img src="img/icons/bag.png" alt="">
+            <span>2</span>
+          </a>
+          <a class="icon-user" href="./logout.php">
+            <img src="img/icons/logout.png" alt="Cerrar Sesión">
+          </a>
+        <?php endif ?>
+
       </div>
-      <div class="user-access">
-        <a href="./register.php">Registrar</a>
-        <a href="./login.php" class="in">Iniciar Sesión</a>
-      </div>
-      <nav class="main-menu mobile-menu">
+
+      <?php if(empty($_SESSION["usuario"])) : ?>
+        <div class="user-access">
+          <a href="./register.php">Registrar</a>
+          <a href="./login.php" class="in">Iniciar Sesión</a>
+        </div>
+      <?php else: ?>
+        <div class="user-access">
+        <h4>Bienvenido <?php echo $_SESSION["usuario"]?></h4>
+        </div>
+      <?php endif ?>
+
+      <nav class="main-menu mobile-menu float-left">
         <ul>
           <li><a class="<?php echo $index ?>" href="./index.php">Inicio</a></li>
           <li><a class="<?php echo $products ?>" href="./products.php">Productos</a>
@@ -49,6 +64,7 @@
           <li><a class="<?php echo $contact ?>" href="./contact.php">Contacto</a></li>
         </ul>
       </nav>
+
     </div>
   </div>
 </header>
