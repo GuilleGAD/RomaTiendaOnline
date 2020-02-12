@@ -53,22 +53,47 @@ if($_FILES){
     $errores[] = "Error al cargar la foto de perfil.";
   }else{
     $extension = pathinfo($_FILES["fotoPerfil"]["name"], PATHINFO_EXTENSION);
-    if($extension!="jpg" && $extension!="jepg" && $extension!="png"){
+    if($extension!="jpg" && $extension!="jpeg" && $extension!="png"){
       $errores[] = "La foto de perfil debe ser jpg, jpeg o png.";
     }else{
-      move_uploaded_file($_FILES["fotoPerfil"]["tmp_name"], "img/profile/".$_POST["userName"].".".$extension);
+      move_uploaded_file($_FILES["fotoPerfil"]["tmp_name"], "img/imageProfiles/".$_POST["userName"].".".$extension);
     }
   }
 }
 
-if(sizeof($errores)!=0){
-  $nombre = $_POST["nombre"];
-  $apellido = $_POST["apellido"];
-  $userName = $_POST["userName"];
-  $email = $_POST["email"];
-  $telefono = $_POST["telefono"];
-  $password = $_POST["password"];
-  $repassword = $_POST["repassword"];
+if($_POST){
+  if(sizeof($errores)!=0){
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $userName = $_POST["userName"];
+    $email = $_POST["email"];
+    $telefono = $_POST["telefono"];
+    $password = $_POST["password"];
+    $repassword = $_POST["repassword"];
+  }else{
+    //REGISTRO DE USUARIOS
+    //recuperando usuarios guardados
+    $archivo = file_get_contents("json/listaUsuarios.json");
+    $listaUsuarios = json_decode($archivo, true);
+
+    //creando nuevo usuario
+    $passEncriptado = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $listaUsuarios [] = [
+      "Nombre" => $_POST["nombre"],
+      "Apellido" => $_POST["apellido"],
+      "Nombre de Usuario" => $_POST["userName"],
+      "Email" => $_POST["email"],
+      "Telefono" => $_POST["telefono"],
+      "Password" => $passEncriptado
+    ];
+
+    $json = json_encode($listaUsuarios);
+    file_put_contents("json/listaUsuarios.json", $json);
+  }
 }
+
+
+
+
 
 ?>
