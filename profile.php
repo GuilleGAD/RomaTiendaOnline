@@ -1,4 +1,5 @@
 <?php require_once("phpCompartido/funciones.php"); ?>
+<?php require_once("validaciones/validacionRegisterProfile.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +23,8 @@
         <!--left col-->
 
         <div class="text-center">
-          <img src="./img/imageProfiles/<?php echo $_SESSION["usuario"] . "." . $_SESSION["extension"]?>" class="avatar img-circle img-thumbnail" alt="avatar">
-          <h3><?php echo $_SESSION["usuario"]?></h3>
-          <input type="file" class="text-center center-block file-upload">
+          <img class="avatar img-circle img-thumbnail" id="imagenPrevisualizacion" src="./img/imageProfiles/<?php echo $usuario . "." . $extension ?>">
+          <h3><?php echo $usuario?></h3>
         </div>
         </hr><br>
 
@@ -40,68 +40,81 @@
       <!--/col-3-->
       <div class="col-sm-9">
         <br><br><br>
-        <form class="form" action="##" method="post" id="registrationForm">
-          <div class="form-group">
+        <form action="profile.php" class="form" method="POST" id="actualizarPerfil" enctype="multipart/form-data">
 
+          <div class="form-group">
             <div class="col-xs-6">
-              <label for="first_name">
+              <label for="nombre">
                 <h4>Nombre</h4>
               </label>
-              <input type="text" class="form-control" name="first_name" id="first_name" 
-              placeholder="nombre" title="Ingrese su nombre." value=<?php echo $_SESSION["nombre"]?>>
+              <input type="text" class="form-control" name="nombre" id="nombre" 
+              placeholder="nombre" title="Ingrese su nombre." value="<?php echo $nombre ?>">
             </div>
           </div>
-          <div class="form-group">
 
+          <div class="form-group">
             <div class="col-xs-6">
-              <label for="last_name">
+              <label for="apellido">
                 <h4>Apellido</h4>
               </label>
-              <input type="text" class="form-control" name="last_name" id="last_name"
-              placeholder="apellido" title="Ingrese su apellido." value=<?php echo $_SESSION["apellido"]?>>
+              <input type="text" class="form-control" name="apellido" id="apellido"
+              placeholder="apellido" title="Ingrese su apellido." value="<?php echo $apellido ?>">
             </div>
           </div>
 
           <div class="form-group">
-
             <div class="col-xs-6">
-              <label for="phone">
+              <label for="telefono">
                 <h4>Telefono</h4>
               </label>
-              <input type="text" class="form-control" name="phone" id="phone" value=<?php echo $_SESSION["telefono"]?>
+              <input type="text" class="form-control" name="telefono" id="telefono" value="<?php echo $telefono ?>"
               placeholder="ingrese su número telefónico" title="Ingrese su número telefónico con código de área.">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-xs-6">
-              <label for="mobile">
-                <h4>Celular</h4>
-              </label>
-              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="ingrese su número de celular" title="Ingrese su número de celular con código de área.">
-            </div>
-          </div>
-          <div class="form-group">
-
-            <div class="col-xs-6">
               <label for="email">
                 <h4>Email</h4>
               </label>
-              <input type="email" class="form-control" name="email" id="email" value=<?php echo $_SESSION["email"]?>
+              <input type="email" class="form-control" name="email" id="email" value="<?php echo $email ?>"
               placeholder="tu@email.com" title="Ingrese su email.">
             </div>
           </div>
-          <div class="form-group">
 
+          <div class="form-group">
             <div class="col-xs-6">
-              <label for="email">
+              <label for="provincia">
                 <h4>Provincia</h4>
               </label>
-              <input type="email" class="form-control" id="location" placeholder="provincia" title="Ingrese su provincia.">
+              <input type="text" class="form-control" name="provincia" id="provincia" placeholder="provincia" 
+              <?php if($provincia!=""){echo "value="."\"".$provincia."\"";} ?> title="Ingrese su provincia.">
             </div>
           </div>
-          <div class="form-group">
 
+          <div class="form-group">
+            <div class="col-xs-6">
+              <label for="ciudad">
+                <h4>Ciudad</h4>
+              </label>
+              <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="ciudad" 
+              <?php if($ciudad!=""){echo "value="."\"".$ciudad."\"";} ?> title="Ingrese su ciudad.">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-12">
+              <label for="direccion">
+                <h4>Dirección</h4>
+              </label>
+              <input type="text" class="form-control" name="direccion" id="direccion" placeholder="direccion" 
+              <?php if($direccion!=""){echo "value="."\"".$direccion."\"";} ?> title="Ingrese su dirección.">
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
             <div class="col-xs-6">
               <label for="password">
                 <h4>Password</h4>
@@ -109,19 +122,29 @@
               <input type="password" class="form-control" name="password" id="password" placeholder="password" title="Ingrese su password.">
             </div>
           </div>
-          <div class="form-group">
 
+          <div class="form-group">
             <div class="col-xs-6">
-              <label for="password2">
+              <label for="repassword">
                 <h4>Confirmación de Password</h4>
               </label>
-              <input type="password" class="form-control" name="password2" id="password2" placeholder="confirmación de password" title="Ingrese la verificación de password.">
+              <input type="password" class="form-control" name="repassword" id="repassword" placeholder="confirmación de password" title="Ingrese la verificación de password.">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6">
+              <label for="fotoPerfil">
+                <h4>Cambiar Foto de Perfil</h4>
+              </label>
+              <input type="file" name="fotoPerfil" id="seleccionArchivos" accept="image/*" class="text-center center-block file-upload">
+              <script src="js/previsualizarImagen.js"></script>
             </div>
           </div>
           <div class="form-group">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-xs-offset-8">
               <br>
-              <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+              <button class="btn btn-lg btn-success" form="actualizarPerfil" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
               <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
             </div>
           </div>
@@ -133,6 +156,10 @@
     <!--/row-->
   </div>
   <br><br><br>
+
+  <!-- Alerta de Error -->
+  <?php require_once("phpCompartido/errorAlert.php"); ?>
+  <!-- Fin alerta de Error -->
 
   <!-- FOOTER -->
   <?php require_once("phpCompartido/footer.php"); ?>

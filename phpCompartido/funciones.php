@@ -1,6 +1,38 @@
 <?php
+
+$nombre = "";
+$apellido = "";
+$usuario = "";
+$telefono = "";
+$email = "";
+$extension = "";
+$provincia = "";
+$ciudad = "";
+$dirección = "";
+
 if(!isset($_SESSION)){ 
   session_start(); 
+}
+
+$archivo = file_get_contents("json/listaUsuarios.json");
+$listaUsuarios = json_decode($archivo, true);
+
+if(isset($_COOKIE["usuario"])){
+  $_SESSION["usuario"] = $_COOKIE["usuario"];
+}
+
+if(isset($_SESSION["usuario"])){
+  $datosUsuario = $listaUsuarios[$_SESSION["usuario"]];
+
+  $nombre = $datosUsuario["nombre"];
+  $apellido = $datosUsuario["apellido"];
+  $usuario = $_SESSION["usuario"];
+  $telefono = $datosUsuario["telefono"];
+  $email = $datosUsuario["email"];
+  $extension = $datosUsuario["extension"];
+  $provincia = $datosUsuario["provincia"];
+  $ciudad = $datosUsuario["ciudad"];
+  $direccion = $datosUsuario["direccion"];
 }
 
 $url = $_SERVER['REQUEST_URI'];

@@ -89,7 +89,7 @@
                   <img src="img/f-box-1.jpg" alt="">
                   <div class="box-text">
                     <span class="trend-year">2020 Party</span>
-                    <h2>Accesorios</h2>
+                    <h2>Estilo</h2>
                     <span class="trend-alert">Tendencias</span>
                     <a href="#" class="primary-btn">Ver mas</a>
                   </div>

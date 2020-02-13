@@ -1,5 +1,5 @@
-<?php require_once("validaciones/validacionLogin.php"); ?>
 <?php require_once("phpCompartido/funciones.php"); ?>
+<?php require_once("validaciones/validacionLogin.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,22 +30,29 @@
   <!-- Login Section Begin -->
   <div class="contact-section">
     <div class="container">
-      <div class="row justify-content-md-center">
-        <form action="login.php" class="contact-form" method="POST">
-          <div class="col-lg-12">
-            <input type="email" placeholder="E-mail" name="email" value="<?=$email?>">
-            <input type="password" placeholder="Password" name="password" value="<?=$password?>">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 offset-lg-3">
+          <form action="login.php" class="contact-form" method="POST">
+            <div class="col-12">
+              <input type="text" placeholder="Nombre de Usuario" name="usuario" value="<?=$usuario?>">
+              <input type="password" placeholder="Password" name="password" value="<?=$password?>">
+            </div>
+            <div class="form-check col-8 text-left">
+              <input class="form-check-input" name="recordar" type="checkbox" value="1" id="recordar">
+              <label class="form-check-label" for="recordar">
+                Recordarme
+              </label>
+            </div>
+            <div class="col-12 text-right">
+              <button type="submit">Inicia Sesión</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="col-12 text-right">
+            <a href="">Recuperar contraseña</a>
           </div>
-          <div class="form-check col-lg-12">
-            <input class="form-check-input" type="checkbox" value="" id="recordarme">
-            <label class="form-check-label" for="recordarme">
-              Recordarme
-            </label>
-          </div>
-          <div class="col-lg-12 text-right">
-            <button type="submit">Inicia Sesión</button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

@@ -1,28 +1,49 @@
 <?php
 
-$email = "";
+$usuario = "";
 $password = "";
 $errores = [];
 
 if($_POST){
   //Validar
-  if(strlen($_POST["email"])==0){
-    $errores[] = "El EMAIL no puede ser vacío.";
-  }else if(filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false){
-    $errores[] = "El EMAIL no es un mail valido.";
+  if(strlen($_POST["usuario"])==0){
+    $errores[] = "El NOMBRE DE USUARIO no puede ser vacío.";
   }
   if(strlen($_POST["password"])==0){
     $errores[] = "El PASSWORD no puede ser vacío.";
   }
 
-  //Registrarlo
+  if(sizeof($errores)==0){
+    $usuario = $_POST["usuario"];
+    $archivo = file_get_contents("json/listaUsuarios.json");
+    $listaUsuarios = json_decode($archivo, true);
 
-  //header("Location:exito.php");exit;
+    if($listaUsuarios[$usuario]==null){
+      $errores[] = "El NOMBRE DE USUARIO no existe.";
+    }else{
+      if(!password_verify($_POST["password"],$listaUsuarios[$usuario]["password"])){
+        $errores[] = "El PASSWORD es incorrecto.";
+      }else{
+        $_SESSION["usuario"] = $usuario;
+  
+        if(!empty($_POST["recordar"])) {
+          $cookie_name = "usuario";
+          $cookie_value = $_POST["usuario"];
+          setcookie($cookie_name, $cookie_value, time() + 60 * 60 * 24);
+        }
+        
+        header("Location:index.php");exit;
+      }
+    }
+  }
+
+  if(sizeof($errores)!=0){
+    $usuario = $_POST["usuario"];
+  }
+
+  //header("Location:index.php");exit;
 }
 
-if(sizeof($errores)!=0){
-  $email = $_POST["email"];
-  $password = $_POST["password"];
-}
+
 
 ?>

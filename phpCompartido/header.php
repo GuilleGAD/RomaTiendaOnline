@@ -28,11 +28,11 @@
           <a class="icon-user" href="./profile.php">
             <img src="img/icons/man.png" alt="">
           </a>
-          <a href="./check-out.php">
+          <a class="icon-user" href="./check-out.php">
             <img src="img/icons/bag.png" alt="">
             <span>2</span>
           </a>
-          <a class="icon-user" href="./logout.php">
+          <a href="./logout.php">
             <img src="img/icons/logout.png" alt="Cerrar Sesión">
           </a>
         <?php endif ?>
